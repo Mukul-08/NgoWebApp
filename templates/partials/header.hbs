@@ -1,0 +1,90 @@
+{{!-- top small header --}}
+{{#if success}}
+{{>successmsg}}
+{{/if}}
+{{#if error}}
+{{>errormsg}}
+{{/if}}
+<div class="header-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 text-left shy640-link">
+        <a href="/faq">FAQ</a>
+        <a href="#" onclick="commonMessage()">Forum</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="col-md-6 col-sm-6 text-right shy640-social">
+        <a href="#" class="grow"><i class="icon-facebook2"></i></a>
+        <a href="#" class="grow"><i class="icon-twitter2"></i></a>
+        <a href="#" class="grow"><i class="icon-instagram2"></i></a>
+        <a href="#" class="grow"><i class="icon-linkedin2"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+{{!-- start:header --}}
+<header id="shy640-header-section" class="sticky-banner">
+  <div class="container">
+    <div class="nav-header">
+      <a href="#" class="js-shy640-nav-toggle shy640-nav-toggle dark"><i></i></a>
+      <a href="/"><img src="./images/logo_icon.png" alt="Being Care Foundation Logo!"
+          style="filter: drop-shadow(6px 6px 4px rgb(63, 63, 63))" /></a>
+      <nav id="shy640-menu-wrap" role="navigation">
+        <ul class="sf-menu" id="shy640-primary-menu">
+          <li id="home">
+            <a href="/">Home</a>
+          </li>
+          <li id="">
+            <a href="#" class="shy640-sub-ddown">Projects</a>
+            <ul class="shy640-sub-menu">
+              <li id="#"><a href="#">Animal Care</a></li>
+              <li id=""><a href="#">Free FirstAid Program</a></li>
+              <li id=""><a href="#">Water Care</a></li>
+            </ul>
+          </li>
+          <li id="about"><a href="/about">About</a></li>
+          <li id="blog"><a href="/blog">Blog</a></li>
+          <li id="contact"><a href="/contact">Contact</a></li>
+          {{#if isAuthenticated}}
+          <li id="user-button" class="my-3">
+            <a href="#" class="shy640-sub-ddown">{{username}}</a>
+            <ul class="shy640-sub-menu">
+              <li id="dashboard"><a href="/dashboard">Dashboard</a></li>
+              <li id="dashboard"><a href="/logout">Logout<i class="icon-signout"></i></a></li>
+            </ul>
+          </li>
+          {{else}}
+          <li id="join-button" class="my-3">
+            <a href="#" class="shy640-sub-ddown">Join</a>
+            <ul class="shy640-sub-menu">
+              <li id="register-button"><a href="/register">Register</a></li>
+              <li id="login-button"><a href="/login">Login</a></li>
+            </ul>
+          </li>
+          {{/if}}
+          <li class="ignore-invert">
+            {{>darkmode}}
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+{{!-- end:header --}}
+<div class="text-center">
+
+</div>
+
+{{!-- Big image section --}}
+<div class="shy640-hero">
+  <div class="shy640-overlay"></div>
+  <div class="shy640-cover text-center ignore-invert img-responsive" data-stellar-background-ratio="0.5"
+    style="background-image: url('{{imageurl}}')">
+    <div class="desc animate-box" style="z-index: 10;">
+      {{>message}}
+      <span>We Care and make Aware</span>
+      <span><a class="btn btn-primary btn-lg ignore-invert" href="https://rzp.io/l/MrSqoAd" target="_blank">Donate
+          Now</a></span>
+    </div>
+  </div>
+</div>
